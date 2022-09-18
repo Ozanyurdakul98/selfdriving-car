@@ -5,11 +5,11 @@ class Controls {
     this.right = false;
     this.reverse = false;
 
-    //private method for it to not exceed this scope
+    //private method, no access outside of Controls class
     this.#addKeyboardListeners();
   }
   #addKeyboardListeners() {
-    //or write document.onkeydown = (event) => {...}
+    //document.onkeydown = (event) => {...}
     document.addEventListener("keydown", (event) => {
       switch (event.key) {
         case "ArrowLeft":
