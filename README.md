@@ -7,5 +7,7 @@ learnings chronologically listed:
 
 - Canvas API, drawing in JS
 - JS Classes, car & controls
-- Private methods, stay in scope#
+- Private methods, stay's in scope#
 - Keyboard events, driving car
+- asynchronous methods, like middleware?
+- requestAnimationFrame(), illusion of movement

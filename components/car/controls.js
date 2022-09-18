@@ -10,6 +10,7 @@ class Controls {
   }
   #addKeyboardListeners() {
     //document.onkeydown = (event) => {...}
+    //without arrow function .this. wouldn't reffer to above this. anymore
     document.addEventListener("keydown", (event) => {
       switch (event.key) {
         case "ArrowLeft":
