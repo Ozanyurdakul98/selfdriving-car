@@ -6,8 +6,8 @@ I've to admit that I also wanted to know how Neural Networks work in programming
 learnings chronologically listed:
 
 - Canvas API, drawing in JS
-- JS Classes, car & controls
+- JS Classes, for car & controls
 - Private methods, stay's in scope#
-- Keyboard events, driving car
-- asynchronous methods, like middleware?
-- requestAnimationFrame(), illusion of movement
+- Keyboard events, drive car
+- Asynchronous methods, promise's for car
+- Update(),requestAnimationFrame(), illusion of movement
