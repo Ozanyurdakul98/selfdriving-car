@@ -7,6 +7,7 @@ learnings chronologically listed:
 
 - Canvas API, drawing in JS
 - JS Classes, for car & controls
+- Constructor(), class method for Object instances
 - Private methods, stay's in scope#
 - Keyboard events, drive car
 - Asynchronous methods, promise's for car
