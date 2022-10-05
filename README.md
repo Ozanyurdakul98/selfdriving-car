@@ -12,4 +12,4 @@ learnings chronologically listed:
 - Keyboard events, drive car
 - Asynchronous methods, promise's for car
 - Update(),requestAnimationFrame(), illusion of movement
-- ray-casting
+- Ray-casting --> collision warning/detection/avoidance
