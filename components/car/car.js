@@ -10,17 +10,27 @@ class Car {
     this.maxspeed = 3;
     this.friction = 0.05;
     this.angle = 0;
+    this.damaged = false;
 
     this.sensor = new Sensor(this);
     this.controls = new Controls();
   }
 
-  update(roadBoarders) {
+  update(roadBorders) {
     this.#move();
     this.polygon = this.#createPolygon();
-    this.sensor.update(roadBoarders);
+    this.damaged = this.#assessDamage(roadBorders);
+    this.sensor.update(roadBorders);
   }
 
+  #assessDamage(roadBorders) {
+    for (let i = 0; i < roadBorders.length; i++) {
+      if (polysIntersect(this.polygon, roadBorders[i])) {
+        return true;
+      }
+    }
+    return false;
+  }
   //points to be considered for ray casting. Like shape of car points
   #createPolygon() {
     const points = [];
@@ -88,6 +98,11 @@ class Car {
   }
 
   draw(ctx) {
+    if (this.damaged) {
+      ctx.fillStyle = "red";
+    } else {
+      ctx.fillStyle = "black";
+    }
     ctx.beginPath();
     ctx.moveTo(this.polygon[0].x, this.polygon[0].y);
     for (let i = 1; i < this.polygon.length; i++) {
